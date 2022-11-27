@@ -1,56 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import NavbarC from "./components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import AddPost from "./components/pages/AddPost";
+import NotFound from "./components/pages/NotFound";
+import Footer from "./components/pages/Footer";
+import SideNav from "./components/pages/SideNav";
+import ShowPost from "./components/pages/ShowPost";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="container-fluid body-contain">
+      <NavbarC />
+      <div className="body-container">
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/about" element={<About/>} />
+          <Route exact path="/add-post" element={<AddPost/>} />
+          <Route exact path="/show-post/:id" element={<ShowPost/>} />
+          <Route exact path="*" element={<NotFound/>} />
+        </Routes>
+      </div>
+      <Footer/>
     </div>
   );
 }

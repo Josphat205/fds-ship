@@ -1,0 +1,98 @@
+.Main-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.anyClass {
+    min-height:30vh;
+    max-height:65vh;
+    width: 350px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+.post-details{
+    width: 300px;
+    max-height: 80vh ;
+    margin-bottom: 5px;
+}
+
+.card-bg-container{
+    width: 300px;
+    height: 75vh ;
+    margin-top:35px;
+}
+.img-container{
+    width: 100%;
+    height: 55vh;
+}
+.comments{
+    width: 300px;
+}
+.comment-main{
+    width: 300px;
+}
+.comment-form{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 350px;
+    margin-top: 10px;
+}
+.comment-body{
+    min-height: 30vh;
+    max-height: 80vh;
+    margin-top: 30px;
+
+}
+
+@media (max-width:768px) {
+    .comment-form{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .comment-main{
+        width: 100%;
+    }
+    .comment-body{
+        min-height: 30vh;
+        max-height: 60vh;
+        margin-top: 60px;
+    }
+    .comments{
+        width: 100%;
+    }
+    .anyClass {
+        min-height:30vh;
+        max-height:50vh;
+        overflow-y: scroll;
+        width: 100%;
+        scrollbar-width: none;
+      }
+    .Main-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .card-bg-container{
+        width: 100%;
+        height: 95vh ;
+        margin-top: 30px;
+    }
+    .post-details{
+        width: 100%;
+        max-height: 90vh ;
+        margin-bottom: 5px;
+    }
+    .img-container{
+        height: 70vh;
+       
+    }
+    .img-card{
+        width: 100%;
+        height: 100%;
+    }
+}
