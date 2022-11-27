@@ -10,6 +10,8 @@ import NotFound from "./components/pages/NotFound";
 import Footer from "./components/pages/Footer";
 import SideNav from "./components/pages/SideNav";
 import ShowPost from "./components/pages/ShowPost";
+import Login from "./components/pages/Auth/Login";
+import Register from "./components/pages/Auth/Register";
 function App() {
   return (
     <div className="container-fluid body-contain">
@@ -19,6 +21,8 @@ function App() {
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/about" element={<About/>} />
           <Route exact path="/add-post" element={<AddPost/>} />
+          <Route exact path="/login" element={<Login/>} />
+          <Route exact path="/register" element={<Register/>} />
           <Route exact path="/show-post/:id" element={<ShowPost/>} />
           <Route exact path="*" element={<NotFound/>} />
         </Routes>

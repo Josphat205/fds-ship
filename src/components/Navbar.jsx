@@ -25,6 +25,8 @@ const NavbarC = () => {
            <NavLink className="nav-link" style={({ isActive }) => isActive ? {color:'blue'} : {color:'black'}} to='/'>Home</NavLink>
            <NavLink className="nav-link" style={({ isActive }) => isActive ? {color:'blue'} : {color:'black'}} to='/about'>About</NavLink>
            <NavLink className="nav-link" style={({ isActive }) => isActive ? {color:'blue'} : {color:'black'}} to='/add-post'>Add Post</NavLink>
+           <NavLink className="nav-link" style={({ isActive }) => isActive ? {color:'blue'} : {color:'black'}} to='/login'>Login</NavLink>
+           <NavLink className="nav-link" style={({ isActive }) => isActive ? {color:'blue'} : {color:'black'}} to='/register'>Register</NavLink>
           </Nav>
           <Form className="d-flex">
             <Form.Control
